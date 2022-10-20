@@ -8,22 +8,22 @@ class ImageManager {
 
 public:
 
-	ImageManager(const std::string& input);
+    ImageManager(const std::string& input);
 
-	void setOutput(const std::string& output);
-	void applyNegative();
-	void replaceColor(int oldColor, int newColor);
-	void improveSharpness();
-	void applyGaussianBlur();
-	void highlightBorder();
-	void reductNoise();
-	void applyVignette();
-	void cutImage(int x, int y, int width, int height);
+    void setOutput(const std::string& output);
+    void applyNegative();
+    void replaceColor(int oldColor, int newColor);
+    void improveSharpness();
+    void applyGaussianBlur();
+    void highlightBorder();
+    void reductNoise();
+    void applyVignette();
+    void cutImage(int x, int y, int width, int height);
 
 private:
 
-	std::string input;
-	std::string output;
+    std::string input;
+    std::string output;
 
 };
 

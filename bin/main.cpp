@@ -11,7 +11,7 @@ namespace {
 
 void printHelp(const std::string& helpFileName = "help.txt")
 {
-	std::ifstream helpFile(helpFileName);
+    std::ifstream helpFile(helpFileName);
 
     if (helpFile.is_open())
     {
@@ -19,8 +19,8 @@ void printHelp(const std::string& helpFileName = "help.txt")
     }
     else
     {
-    	std::cout << "File with documentation could not be open :( " << std::endl;
-    	assert(!"OK");
+        std::cout << "File with documentation could not be open :( " << std::endl;
+        assert(!"OK");
     }
 }
 
@@ -29,19 +29,19 @@ void printHelp(const std::string& helpFileName = "help.txt")
 
 int main(int argc, char* argv[])
 {
-	editor::Parser parser(argc, argv);
+    editor::Parser parser(argc, argv);
 
-	switch (parser.getMode())
-	{
-		case editor::Mode::HELP: 		printHelp();
-										break;
+    switch (parser.getMode())
+    {
+        case editor::Mode::HELP:        printHelp();
+                                        break;
 
-		case editor::Mode::INTERACTIVE: editor::interactive::runInteractive();
-										break;
+        case editor::Mode::INTERACTIVE: editor::interactive::runInteractive();
+                                        break;
 
-		case editor::Mode::DEFAULT:		editor::editimpl::applyChanges(parser.getOptions());
-										break;
+        case editor::Mode::DEFAULT:     editor::editimpl::applyChanges(parser.getOptions());
+                                        break;
 
-		default:						assert(!"OK");
-	}
+        default:                        assert(!"OK");
+    }
 }
