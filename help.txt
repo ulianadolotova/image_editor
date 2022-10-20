@@ -1,0 +1,60 @@
+
+
+--help - display documentation
+
+--interactive - run editor in interactive mode
+
+
+Available commands in interactive mode:
+
+ls                              - list subdirectories for your current directory
+
+cd <new_dir>                    - change your current directory to <new_dir>
+
+load <image_name>               - start editing <image_name>
+
+    negative                        - invert color
+
+    replace_color <old> <new>       - replace color from <old> to <new>
+
+    sharpness_improve               - improve sharpness
+
+    gaussian_blur                   - apply gaussian blur
+
+    border_highlighting             - higlight borders
+
+    noise_reduction                 - reduct noise
+
+    vignette                        - do vignette
+
+    cut <x> <y> <width> <height>    - cut picture in the form of a rectangle with coordinates {x, x + width, y, y + height}
+
+    undo                            - discard your last change for the image
+
+drop                            - finish editing your current image without saving changes
+
+save <new_image>                - finish editing your current image with saving changes to the <new_image>
+                                  if new_image is not specified, the original image will be changed
+
+
+Available options in default mode:
+
+-i                              - specify image to edit [required option] 
+
+-o                              - specify name for edited image [if not specified, the original image will be changed]
+
+-negative                       - invert color
+
+-replace_color <old> <new>      - replace color from <old> to <new>
+
+-sharpness_improve              - improve sharpness
+
+-gaussian_blur                  - apply gaussian blur
+
+-border_highlighting            - higlight borders
+
+-noise_reduction                - reduct noise
+
+-vignette                       - do vignette
+
+-cut <x> <y> <width> <height>   - cut picture in the form of a rectangle with coordinates {x, x + width, y, y + height}
