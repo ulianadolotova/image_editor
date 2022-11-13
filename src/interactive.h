@@ -11,7 +11,8 @@ enum class CommandName {
     LOAD,
     UNDO,
     SAVE,
-    DROP
+    DROP,
+    QUIT
 };
 
 const std::unordered_map<std::string, CommandName> STRING_TO_COMMAND = {
@@ -21,10 +22,11 @@ const std::unordered_map<std::string, CommandName> STRING_TO_COMMAND = {
     {"load",    CommandName::LOAD},
     {"undo",    CommandName::UNDO},
     {"save",    CommandName::SAVE},
-    {"drop",    CommandName::DROP}
+    {"drop",    CommandName::DROP},
+    {"quit",    CommandName::QUIT}
 
 };
 
 void runInteractive();
 
-}
+} // editor::interactive

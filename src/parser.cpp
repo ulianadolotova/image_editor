@@ -104,4 +104,4 @@ const Options& Parser::getOptions() const
     return options_;
 }
 
-}
+} // namespace editor

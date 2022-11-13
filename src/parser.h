@@ -25,4 +25,4 @@ private:
     OptionName readOption(const std::string& str) const;
 };
 
-}
+} // namespace editor

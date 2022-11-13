@@ -21,10 +21,12 @@ enum class OptionName {
     REPLACE_COLOR,
     SHARPNESS_IMPROVE,
     GAUSSIAN_BLUR,
+    GREY_FILTER,
     BORDER_HIGHLIGHT,
     NOISE_REDUCTION,
     VIGNETTE,
-    CUT
+    CUT,
+    COMPRESS
 };
 
 struct Option {
@@ -43,10 +45,12 @@ const std::unordered_map<std::string, OptionName> STRING_TO_OPTION = {
     {"replace_color",       OptionName::REPLACE_COLOR},
     {"sharpness_improve",   OptionName::SHARPNESS_IMPROVE},
     {"gaussian_blur",       OptionName::GAUSSIAN_BLUR},
+    {"grey_filter",         OptionName::GREY_FILTER},
     {"border_highlight",    OptionName::BORDER_HIGHLIGHT},
     {"noise_reduction",     OptionName::NOISE_REDUCTION},
     {"vignette",            OptionName::VIGNETTE},
-    {"cut",                 OptionName::CUT}
+    {"cut",                 OptionName::CUT},
+    {"compress",            OptionName::COMPRESS}
 };
 
 const std::unordered_map<std::string, Mode> STRING_TO_MODE = {
@@ -55,4 +59,4 @@ const std::unordered_map<std::string, Mode> STRING_TO_MODE = {
     {"interactive", Mode::INTERACTIVE}
 };
 
-}
+} // namespace editor

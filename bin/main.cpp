@@ -24,7 +24,7 @@ void printHelp(const std::string& helpFileName = "help.txt")
     }
 }
 
-}
+} // namespace
 
 
 int main(int argc, char* argv[])

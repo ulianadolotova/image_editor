@@ -21,13 +21,17 @@ load <image_name>               - start editing <image_name>
 
     gaussian_blur                   - apply gaussian blur
 
-    border_highlighting             - higlight borders
+    grey_filter                     - apply grey filter
 
-    noise_reduction                 - reduct noise
+    border_highlight                - higlight borders
+
+    noise_reduction                 - reduce noise
 
     vignette                        - do vignette
 
-    cut <x> <y> <width> <height>    - cut picture in the form of a rectangle with coordinates {x, x + width, y, y + height}
+    cut <x> <y> <width> <height>    - cut picture in the form of a rectangle with given coordinates
+
+    compress <width> <height>       - compress picture to <width> * <height>
 
     undo                            - discard your last change for the image
 
@@ -36,10 +40,12 @@ drop                            - finish editing your current image without savi
 save <new_image>                - finish editing your current image with saving changes to the <new_image>
                                   if new_image is not specified, the original image will be changed
 
+quit                            - quit interactive mode
+
 
 Available options in default mode:
 
--i                              - specify image to edit [required option] 
+-i                              - specify image to edit [required option]
 
 -o                              - specify name for edited image [if not specified, the original image will be changed]
 
@@ -51,10 +57,12 @@ Available options in default mode:
 
 -gaussian_blur                  - apply gaussian blur
 
--border_highlighting            - higlight borders
+-border_highlight               - higlight borders
 
--noise_reduction                - reduct noise
+-noise_reduction                - reduce noise
 
 -vignette                       - do vignette
 
--cut <x> <y> <width> <height>   - cut picture in the form of a rectangle with coordinates {x, x + width, y, y + height}
+-cut <x> <y> <width> <height>   - cut picture in the form of a rectangle with given coordinates
+
+-compress <width> <height>      - compress picture to <width> * <height>

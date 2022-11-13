@@ -75,7 +75,8 @@ void processLoad()
 
                 case CommandName::LS:
                 case CommandName::CD:
-                case CommandName::LOAD:     std::cout << "To use this command \"" << curCommand
+                case CommandName::LOAD:
+                case CommandName::QUIT:     std::cout << "To use this command \"" << curCommand
                                                       << "\" you should save current changes or drop them first" << std::endl;
                                             break;
 
@@ -94,12 +95,13 @@ void processLoad()
         }
         else
         {
+            std::cout << "Unknown command or option: \"" << curCommand << "\"" << std::endl;
             assert(!"OK");
         }
     }
 }
 
-}
+} // namespace
 
 void runInteractive()
 {
@@ -127,6 +129,8 @@ void runInteractive()
             case CommandName::LOAD:     processLoad();
                                         break;
 
+            case CommandName::QUIT:     return;
+
             case CommandName::UNDO:
             case CommandName::SAVE:
             case CommandName::DROP:     std::cout << "To use this command: \"" << curCommand
@@ -138,4 +142,4 @@ void runInteractive()
     }
 }
 
-}
+} // namespace editor::interactive
